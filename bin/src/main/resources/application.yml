@@ -1,0 +1,53 @@
+server:
+  port: 8090
+  tomcat:
+    accesslog:
+      enabled: true
+      suffix: .log
+      prefix: access_log
+      file-date-format: .yyyy-MM-dd
+      directory: logs
+    basedir: tomcat
+  # error:
+  #   include-stacktrace: never
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/travel_care
+    username: postgres
+    password: yousuf
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 50
+      auto-commit: false
+  profiles:
+    active: dev
+  jpa:
+    generate-ddl: false 
+    hibernate:
+      ddl-auto: none
+  security:
+    user:
+      name: Admin
+      password: Admin@123
+      roles:
+      - ADMIN
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+  liquibase:
+    enabled: true
+    change-log: db\changelog\db.changelog-master.xml
+  jackson:
+    visibility:
+      getter: none
+      setter: none
+      is-getter: any
+      field: any
+travelcare:
+  email:
+    id: test.yousuf.09@gmail.com
+    password: khwnfbjtlonomsmy
+  attachment:
+    location: D:\\Workspace\\Images\\
