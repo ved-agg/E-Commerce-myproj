@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "travelcare.email.id",
+    "type": "java.lang.String",
+    "description": "The email id for sender email"
+  },
+  {
+    "name": "travelcare.email.password",
+    "type": "java.lang.String",
+    "description": "The email password for sender email "
+  },
+  {
+    "name": "travelcare.attachment.location",
+    "type": "java.lang.String",
+    "description": "Place where the images are stored"
+  }
+]}
